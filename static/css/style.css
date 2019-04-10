@@ -1,0 +1,40 @@
+html {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+main a,
+main a:hover,
+main a:visited {
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+}
+
+nav {
+  font-weight: 800;
+  font-variant: small-caps;
+}
+
+body > header, 
+body > header a {
+  color: hsl(0, 0%, 100%);
+}
+
+body > header a.active {
+  color: hsl(0, 0%, 47%);
+}
+
+body > header a:hover {
+  color: hsl(0, 0%, 71%);
+}
+
+header .header-title {
+  text-align: center;
+  font-size: 400%;
+  font-stretch: expanded;
+}
+
+header .header-subtitle {
+  text-align: center;
+  font-size: 200%;
+}
+

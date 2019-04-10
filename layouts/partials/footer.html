@@ -1,0 +1,8 @@
+<footer>
+  <p>
+  {{- if not .Site.Params.nocopyright -}}
+    Copyright &copy; {{ with .Site.Params.copyrightstart }} {{ . }}-{{ end -}} {{ now.Format "2006" }}
+    <a href="/me/">{{- .Site.Params.author -}}</a>, <a href="/copyright.html">All Rights Reserved</a>. 
+  {{- end -}}
+  </p>
+</footer>

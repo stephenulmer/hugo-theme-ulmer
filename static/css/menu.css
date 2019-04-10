@@ -1,0 +1,104 @@
+/*
+ * Style always
+ */
+
+/* entire navigation element is a flex box */
+nav { 
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em 1em;
+}
+
+nav .brand {
+  margin-right: auto; /* brand is on the left end of flexbox */
+}
+
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.main-menu li {
+  margin: 0 1em 0 1em;
+}
+
+.main-menu a {
+  text-decoration: none;
+}
+
+#main-menu-close {
+  display: none;
+  z-index: 1001;
+}
+
+
+/*
+ * Menu closed
+ */
+
+/* off-screen position */
+.main-menu ul {
+  position: absolute;
+  top: 2em;
+  right: -500px;
+  display: none;
+  transition: right 0.9s ease-in-ease-out;
+  background: white;
+}
+
+/*
+ * Menu open
+ */
+
+.main-menu:target ul {
+  right: 1em;
+  display: block;
+}
+
+.main-menu:target #main-menu-close {
+  display: inline;
+}
+
+.main-menu:target #main-menu-toggle {
+  display: none;
+}
+
+.main-menu:target .backdrop {
+  position: absolute;
+  display: block;  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  cursor: default;
+  /* background: #000; */
+  /* background: rgba(0,0,0,.15); */
+}
+
+/*
+ * Wide screen (in-line menu)
+ */
+
+@media (min-width: 600px) {
+
+  /* undo style for off-screen menu */
+  .main-menu ul {
+    position: relative;
+    top: auto;
+    right: auto;
+    display: block;
+    background: none;
+  }
+
+  .main-menu li {
+    display: inline;
+  }
+
+  #main-menu-toggle {
+    display: none;
+  }
+
+}

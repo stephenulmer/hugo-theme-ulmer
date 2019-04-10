@@ -1,0 +1,20 @@
+name = "Hugo Theme Ulmer"
+license = "MIT"
+licenselink = "https://github.com/stephenulmer/hugo-theme-ulmer/blob/master/LICENSE"
+description = "A clean CSS grid theme for Hugo"
+homepage = "https://github.com/stephenulmer/hugo-theme-ulmer/"
+tags = [
+  "blog",
+  "minimal",
+  "simple",
+  "personal",
+  "clean",
+  "CSS grid"
+]
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Stephen Ulmer"
+  homepage = "https://www.ulmer.org/"
+

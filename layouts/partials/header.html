@@ -1,0 +1,44 @@
+<header>
+
+  <nav id="main-menu" class="main-menu">
+    <span class="brand">{{ with .Site.Params.brand }}{{ . }}{{ else }}{{ .Site.Title }}{{end}}</span>
+
+    <a href="#main-menu"
+       id="main-menu-toggle"
+       class="menu-toggle">
+      <span class="fa fa-bars" />
+    </a>
+  
+    <a href="#main-menu-toggle"
+       id="main-menu-close"
+       class="menu-close">
+      <span class="fa fa-window-close" />
+    </a>
+
+    <ul>
+      {{ $currentPage := . }}
+
+      <li>
+        <a class="{{if eq $currentPage.URL "/" }} active{{end}}" 
+           href="/">Home</a>
+      </li>
+      {{ range .Site.Menus.main }}
+      <!-- FIXME: calculate $active here and use it below -->
+      <li>
+        <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" 
+           href="{{.URL}}">{{ .Name }}</a>
+      </li>
+      {{ end }}
+    </ul>
+
+    <a href="#main-menu-toggle"
+       class="backdrop"
+       tabindex="-1"
+       hidden></a>
+  </nav>
+  <!-- FIXME: {{ partial "debugprint.html" .Site.Menus.main }} -->
+
+  <div class="header-title">{{ .Site.Title }}</div>
+  <div class="header-subtitle">{{ .Site.Params.subtitle }}</div>
+
+</header>

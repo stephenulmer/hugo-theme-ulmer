@@ -1,0 +1,17 @@
+<article class="post">
+  <header>
+    <a href='{{ .Permalink }}'>
+     <h2 class="post-title">{{ .Title }}</h2>
+    </a>
+  </header>
+  <div class="post-meta">{{ .Date.Format "Mon, Jan 2, 2006" }}{{ with .Section}} in {{ . }}{{ end }}</div>
+  <div class="post-sumary">
+    <p>
+      {{ with .Description }}
+        {{ . }}
+      {{ else }}
+        {{ .Summary }}
+      {{ end }}
+    </p>
+  </div>
+</article>

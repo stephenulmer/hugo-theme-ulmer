@@ -1,0 +1,15 @@
+<div id="avatar" class="avatar">
+  <a href="{{ "/me/" | relURL }}">
+  {{ with .Site.Params.about_me.avatar }}
+<!--    <a href="{{ "/me/" | relLangURL }}"> -->
+      <img src="{{ . | relURL }}" alt="avatar" />
+<!--    </a> -->
+  {{ end }}
+  {{ with .Site.Params.about_me.name }}
+    <p>{{ . }}</p>
+  {{ end }}
+  {{ with .Site.Params.about_me.description }}
+    <p>{{ . }}</p>
+  {{ end }}
+  </a>
+</div>
