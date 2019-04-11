@@ -17,6 +17,16 @@ aside {
   margin-bottom: 2em;
 }
 
+aside a,
+aside a:visited {
+  text-decoration: none;
+  color: hsl(0, 0%, 71%);
+}
+
+aside a:hover {
+  color: hsl(0, 0%, 50%);
+}
+
 div#avatar {
   text-align: center;
   display: none;
