@@ -38,3 +38,27 @@ header .header-subtitle {
   font-size: 200%;
 }
 
+.pager {
+  display: flex;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.pager .previous {
+  margin-right: auto;
+}
+
+.pager .next {
+  margin-left: auto;
+}
+
+.pager a,
+.pager a:visited {
+  color: hsl(0, 0%, 71%);
+  text-decoration: none;
+}
+
+.pager a:hover {
+  color: hsl(0, 0%, 50%);
+}
+

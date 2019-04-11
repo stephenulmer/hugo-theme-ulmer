@@ -1,8 +1,24 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ $paginator := .Paginate .Pages }}
+  {{ $paginator := .Paginate .Pages 5 }}
   {{ range $paginator.Pages }}
     {{ .Render "summary" }}
   {{ end }}
+
+  {{ if gt $paginator.TotalPages 1 }}
+    <div class="pager">
+      {{ if $paginator.HasPrev }}
+      <span class="previous">
+        <a href="{{ $paginator.Prev.URL }}">&larr; Newer</a>
+      </span>
+      {{ end }}
+      {{ if $paginator.HasNext }}
+      <span class="next">
+        <a href="{{ $paginator.Next.URL }}">Older &rarr;</a>
+      </span>
+      {{ end }}
+    </div>
+  {{ end }}
+
 {{ end }}
 
