@@ -1,0 +1,26 @@
+ul.pagination {
+  display: flex;
+  font-size: 1.17em;
+  font-weight: bold;
+  list-style: none;
+  justify-content: center;
+}
+
+li.page-item {
+  display: inline;
+  padding: 1em;
+}
+
+a.page-link,
+a:visited.page-link {
+  color: hsl(0, 0%, 71%);
+  text-decoration: none;
+}
+
+a:hover.page-link {
+  color: hsl(0, 0%, 50%);
+}
+
+.page-item.active a.page-link {
+  color: hsl(0, 0%, 47%);
+}
